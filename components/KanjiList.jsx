@@ -18,7 +18,7 @@ export default async function KanjiList({ list }) {
     <section>
       <KanjiCard sequentialKanjiList={sequentialKanjiList} />
       <h2 className='text-xl mt-10'>
-        Showing {pageSize} random kanji of {total}
+        Showing the first {pageSize} kanji of {total}
       </h2>
     </section>
   );
