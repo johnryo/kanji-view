@@ -5,6 +5,7 @@ import KanjiCard from './KanjiCard';
 
 export default async function HomeKanjiList({ list }) {
   console.log(list);
+
   await connectDB();
 
   const pageSize = HOME_KANJI_LIMIT || 15;

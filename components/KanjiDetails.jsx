@@ -13,7 +13,7 @@ export default async function KanjiDetails({ id }) {
   return (
     <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
       <div className='col-span-full xl:col-start-2 xl:col-end-4 flex flex-col gap-4'>
-        <p className={`${noto.className} text-6xl font-light mb-4`}>
+        <p className={`${noto.className} text-7xl font-light mb-4`}>
           {literal}
         </p>
         <p className={`${noto.className} text-2xl font-light`}>

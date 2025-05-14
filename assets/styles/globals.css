@@ -12,7 +12,7 @@
 
 @layer utilities {
   .container {
-    @apply max-w-7xl lg:mx-auto px-5 md:px-10 lg:px-40 xl:px-0 py-10 w-full;
+    @apply max-w-7xl lg:mx-auto px-5 md:px-20 lg:px-40 xl:px-5 py-10 w-full;
   }
 
   .flex-start {
