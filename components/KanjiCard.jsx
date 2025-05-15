@@ -1,6 +1,6 @@
 import KanjiListItem from './kanjiListItem';
 
-export default function KanjiCard({ randomKanjiList, sequentialKanjiList }) {
+const KanjiCard = ({ randomKanjiList, sequentialKanjiList }) => {
   return (
     <ul className='flex flex-wrap gap-6'>
       {randomKanjiList &&
@@ -14,4 +14,6 @@ export default function KanjiCard({ randomKanjiList, sequentialKanjiList }) {
         ))}
     </ul>
   );
-}
+};
+
+export default KanjiCard;

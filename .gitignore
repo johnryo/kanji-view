@@ -23,7 +23,6 @@
 # misc
 .DS_Store
 *.pem
-GenericKanjiList.jsx
 
 # debug
 npm-debug.log*

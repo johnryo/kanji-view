@@ -3,9 +3,7 @@ import Kanji from '@/models/kanji';
 import { HOME_KANJI_LIMIT } from '@/lib/constants';
 import KanjiCard from './KanjiCard';
 
-export default async function HomeKanjiList({ list }) {
-  console.log(list);
-
+const HomeKanjiList = async () => {
   await connectDB();
 
   const pageSize = HOME_KANJI_LIMIT || 15;
@@ -24,4 +22,6 @@ export default async function HomeKanjiList({ list }) {
       </h2>
     </section>
   );
-}
+};
+
+export default HomeKanjiList;

@@ -13,22 +13,27 @@ export default function Navbar() {
       </div>
       <div>
         <ul className='flex align-bottom gap-4'>
-          <li>
+          <li className='bg-[#171717] px-3 py-1 mr-2 rounded'>
+            <Link href='/' className='hover:underline text-white font-semibold'>
+              Search
+            </Link>
+          </li>
+          <li className='py-1'>
             <Link href='/' className='hover:underline'>
               Home
             </Link>
           </li>
-          <li>
+          <li className='py-1'>
             <Link href='/kanji' className='hover:underline'>
               Kanji List
             </Link>
           </li>
-          <li>
-            <Link href='/kanaitems' className='hover:underline'>
+          <li className='py-1'>
+            <Link href='/kana' className='hover:underline'>
               Kana List
             </Link>
           </li>
-          <li>
+          <li className='py-1'>
             <Link href='/about' className='hover:underline'>
               About
             </Link>
