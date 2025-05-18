@@ -1,15 +1,15 @@
 import KanjiListItem from './kanjiListItem';
 
-const KanjiCard = ({ randomKanjiList, sequentialKanjiList }) => {
+const KanjiCard = ({ randomKanji, sequentialKanji }) => {
   return (
     <ul className='flex flex-wrap gap-6'>
-      {randomKanjiList &&
-        randomKanjiList.map((kanji) => (
+      {randomKanji &&
+        randomKanji.map((kanji) => (
           <KanjiListItem key={kanji._id} kanji={kanji} />
         ))}
 
-      {sequentialKanjiList &&
-        sequentialKanjiList.map((kanji) => (
+      {sequentialKanji &&
+        sequentialKanji.map((kanji) => (
           <KanjiListItem key={kanji._id} kanji={kanji} />
         ))}
     </ul>

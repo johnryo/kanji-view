@@ -10,14 +10,14 @@ const KanjiListPage = async () => {
 
   const total = await Kanji.countDocuments();
 
-  const sequentialKanjiList = await Kanji.find({}).limit(pageSize).lean();
+  const sequentialKanji = await Kanji.find({}).limit(pageSize).lean();
 
   return (
     <>
       <KanjiList
         pageSize={pageSize}
         total={total}
-        sequentialKanjiList={sequentialKanjiList}
+        sequentialKanji={sequentialKanji}
       />
     </>
   );

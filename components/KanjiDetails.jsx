@@ -1,7 +1,7 @@
 import connectDB from '@/config/database';
 import Kanji from '@/models/kanji';
-import { convertToSerializableObject } from '@/utils/convertToObject';
-import { noto, titillium } from '@/utils/fonts';
+import { convertToSerializableObject } from '@/lib/utils/convertToObject';
+import { noto, titillium } from '@/lib/utils/fonts';
 
 const KanjiDetails = async ({ id }) => {
   await connectDB();

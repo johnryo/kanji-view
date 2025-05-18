@@ -1,11 +1,11 @@
 import Hero from '@/components/Hero';
-import HomeKanjiList from '@/components/HomeKanjiList';
+import HomeKanji from '@/components/HomeKanji';
 
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <HomeKanjiList />
+      <HomeKanji />
     </>
   );
 }

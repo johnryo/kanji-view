@@ -1,7 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { APP_NAME, APP_DESCRIPTION, APP_KEYWORDS } from '@/lib/constants';
-import { titillium } from '@/utils/fonts';
+import { titillium } from '@/lib/utils/fonts';
 import '@/assets/styles/globals.css';
 
 export const metadata = {

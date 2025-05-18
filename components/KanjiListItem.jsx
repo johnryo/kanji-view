@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { noto } from '@/utils/fonts';
+import { noto } from '@/lib/utils/fonts';
 
 const KanjiListItem = ({ kanji }) => {
   return (
