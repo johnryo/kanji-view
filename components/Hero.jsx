@@ -2,14 +2,14 @@ import KanjiSearchForm from './KanjiSearchForm';
 
 export default function Hero() {
   return (
-    <>
-      <div className='font-bold text-center text-6xl py-16'>
+    <section className='bg-[#ffcc99]'>
+      <h1 className='font-bold text-center text-4xl sm:text-5xl md:text-6xl py-16'>
         Find Your Kanji
-      </div>
+      </h1>
       <div className='flex-center gap-8'>
         <KanjiSearchForm />
         <KanjiSearchForm />
       </div>
-    </>
+    </section>
   );
 }

@@ -1,8 +1,9 @@
 @import 'tailwindcss';
 
 :root {
-  --background: #fffbeb;
+  --background: #ffffff; /*#fffbeb;*/
   --foreground: #171717;
+  --underline: underline dashed red;
 }
 
 @theme inline {
@@ -53,4 +54,13 @@
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+nav li a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+nav li a:hover {
+  border-bottom-color: var(--foreground);
 }

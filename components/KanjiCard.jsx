@@ -1,18 +1,13 @@
-import KanjiListItem from './kanjiListItem';
+import Link from 'next/link';
+import { noto } from '@/lib/utils/fonts';
 
-const KanjiCard = ({ randomKanji, sequentialKanji }) => {
+const KanjiCard = ({ kanji }) => {
   return (
-    <ul className='flex flex-wrap gap-6'>
-      {randomKanji &&
-        randomKanji.map((kanji) => (
-          <KanjiListItem key={kanji._id} kanji={kanji} />
-        ))}
-
-      {sequentialKanji &&
-        sequentialKanji.map((kanji) => (
-          <KanjiListItem key={kanji._id} kanji={kanji} />
-        ))}
-    </ul>
+    <li
+      className={`${noto.className} bg-white text-3xl font-light px-2 pt-2 pb-3 border rounded-xl`}
+    >
+      <Link href={`/kanji/${kanji._id}`}>{kanji.literal}</Link>
+    </li>
   );
 };
 

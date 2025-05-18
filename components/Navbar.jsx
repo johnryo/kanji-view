@@ -3,7 +3,7 @@ import { GiJapaneseBridge } from 'react-icons/gi';
 
 export default function Navbar() {
   return (
-    <nav className='bg-[#ffcc99]'>
+    <nav className='bg-[#ffcc99] border-b border-b-orange-400'>
       <div className='container flex-between'>
         <div className='flex-start gap-4'>
           <GiJapaneseBridge size={48} className='mt-[-15px]' />
@@ -14,33 +14,22 @@ export default function Navbar() {
         </div>
         <div>
           <ul className='flex align-bottom gap-4'>
-            <li className='bg-[#171717] px-3 py-1 mr-2 rounded'>
-              <Link
-                href='/'
-                className='hover:underline text-white font-semibold'
-              >
+            <li className='bg-foreground px-3 py-1 mr-2 rounded'>
+              <Link href='/' className='text-white font-semibold'>
                 Search
               </Link>
             </li>
             <li className='py-1'>
-              <Link href='/' className='hover:underline'>
-                Home
-              </Link>
+              <Link href='/'>Home</Link>
             </li>
             <li className='py-1'>
-              <Link href='/kanji' className='hover:underline'>
-                Kanji List
-              </Link>
+              <Link href='/kanji'>Kanji List</Link>
             </li>
             <li className='py-1'>
-              <Link href='/kana' className='hover:underline'>
-                Kana List
-              </Link>
+              <Link href='/kana'>Kana List</Link>
             </li>
             <li className='py-1'>
-              <Link href='/about' className='hover:underline'>
-                About
-              </Link>
+              <Link href='/about'>About</Link>
             </li>
           </ul>
         </div>

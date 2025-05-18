@@ -13,10 +13,14 @@ const HomeKanji = async () => {
   const randomKanji = await Kanji.aggregate([{ $sample: { size: pageSize } }]);
 
   return (
-    <section>
-      <KanjiCard randomKanji={randomKanji} />
-      <h2 className='text-xl mt-10'>
-        Showing {pageSize} random kanji of {total}
+    <section className='container'>
+      <ul className='mt-4 flex flex-wrap justify-center gap-6'>
+        {randomKanji.map((kanji) => (
+          <KanjiCard key={kanji._id} kanji={kanji} />
+        ))}
+      </ul>
+      <h2 className='mt-10 text-center'>
+        Showing {randomKanji.length} random kanji of {total}
       </h2>
     </section>
   );
