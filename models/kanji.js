@@ -1,7 +1,7 @@
 import { Schema, model, models } from 'mongoose';
 
 const kanjiSchema = new Schema({
-  literal: {
+  character: {
     type: String,
     required: [true, 'One character is required'],
   },

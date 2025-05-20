@@ -11,12 +11,10 @@ const KanjiListPage = async ({ searchParams }) => {
   const { page = 1, pageSize = kanjiListLimit } = await searchParams;
 
   const skip = (page - 1) * pageSize;
-
   const total = await Kanji.countDocuments();
+  const showPagination = total > pageSize;
 
   const sequentialKanji = await Kanji.find({}).skip(skip).limit(pageSize);
-
-  const showPagination = total > pageSize;
 
   return (
     <section>
@@ -30,7 +28,7 @@ const KanjiListPage = async ({ searchParams }) => {
           sequentialKanji={sequentialKanji}
         />
       )}
-      <h2 className='mt-8 text-center'>
+      <h2 className='my-8 text-center'>
         Showing {sequentialKanji.length} kanji of {total}
       </h2>
       {showPagination && (

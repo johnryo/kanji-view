@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { GiJapaneseBridge } from 'react-icons/gi';
+import { ImHome } from 'react-icons/im';
 
 export default function Navbar() {
   return (
@@ -13,14 +14,11 @@ export default function Navbar() {
           <span className='text-xl'>Japanese Characters</span>
         </div>
         <div>
-          <ul className='flex align-bottom gap-4'>
-            <li className='bg-foreground px-3 py-1 mr-2 rounded'>
-              <Link href='/' className='text-white font-semibold'>
-                Search
-              </Link>
-            </li>
+          <ul className='flex align-center gap-4'>
             <li className='py-1'>
-              <Link href='/'>Home</Link>
+              <Link href='/'>
+                <ImHome size={24} className='mt-[-3px] mr-1' />
+              </Link>
             </li>
             <li className='py-1'>
               <Link href='/kanji'>Kanji List</Link>
