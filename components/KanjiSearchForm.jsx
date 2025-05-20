@@ -50,7 +50,7 @@ const KanjiSearchForm = () => {
           value={meaning}
           onChange={(e) => setMeaning(e.target.value)}
           placeholder='English meaning'
-          className='w-full px-4 py-3 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring focus:ring-blue-500'
+          className='w-full px-4 py-3 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring focus:ring-amber-950'
         />
       </div>
       <div className='w-full md:w-3/5 md:pr-2 mb-4 md:mb-0'>
@@ -63,7 +63,7 @@ const KanjiSearchForm = () => {
           value={reading}
           onChange={(e) => setReading(e.target.value)}
           placeholder='Kanji reading in kana'
-          className='w-full px-4 py-3 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring focus:ring-blue-500'
+          className='w-full px-4 py-3 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring focus:ring-amber-950'
         />
       </div>
       <div className='w-full md:w-3/5 md:pr-2 mb-4 md:mb-0'>
@@ -76,12 +76,12 @@ const KanjiSearchForm = () => {
           value={strokes}
           onChange={(e) => setStrokes(e.target.value)}
           placeholder='Stroke count'
-          className='w-full px-4 py-3 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring focus:ring-blue-500'
+          className='w-full px-4 py-3 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring focus:ring-amber-950'
         />
       </div>
       <button
         type='submit'
-        className='md:ml-4 mt-4 md:mt-0 w-full md:w-auto px-6 py-3 rounded-lg bg-foreground text-white hover:bg-[#171717cc] focus:outline-none focus:ring focus:ring-blue-500'
+        className='md:ml-4 mt-4 md:mt-0 w-full md:w-auto px-6 py-3 rounded-lg bg-foreground text-white hover:bg-[#171717cc] focus:outline-none focus:ring focus:ring-background'
       >
         Search
       </button>
