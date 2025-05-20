@@ -9,10 +9,10 @@ import KanjiSearchForm from '@/components/KanjiSearchForm';
 const SearchResultsPage = async ({ searchParams }) => {
   await connectDB();
 
-  const { meaning, reading, strokes } = await searchParams;
+  const { reading, meaning, stroke } = await searchParams;
 
   let query = {
-    $or: [{ meaning: meaning }, { reading: reading }, { strokes: strokes }],
+    $or: [{ reading: reading }, { meaning: meaning }, { stroke: stroke }],
   };
 
   const kanjiItemsQueryResults = await Kanji.find(query).lean();

@@ -13,7 +13,7 @@ const kanjiSchema = new Schema({
     type: String,
     required: [true, 'At least one meaning is required'],
   },
-  strokes: {
+  stroke: {
     type: Number,
     required: [true, 'The stroke count is required'],
   },

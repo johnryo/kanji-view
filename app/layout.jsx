@@ -5,7 +5,10 @@ import { titillium } from '@/lib/utils/fonts';
 import '@/assets/styles/globals.css';
 
 export const metadata = {
-  title: APP_NAME,
+  title: {
+    template: `%s | JACHAR`,
+    default: APP_NAME,
+  },
   description: APP_DESCRIPTION,
   keywords: APP_KEYWORDS,
 };

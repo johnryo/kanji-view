@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 const KanjiSearchForm = () => {
   const [reading, setReading] = useState('');
   const [meaning, setMeaning] = useState('');
-  const [strokes, setStrokes] = useState('');
+  const [stroke, setStroke] = useState('');
 
   const router = useRouter();
 
@@ -27,10 +27,10 @@ const KanjiSearchForm = () => {
       router.push(`/kanji/search-results${query}`);
     }
 
-    if (strokes === '') {
+    if (stroke === '') {
       router.push('/kanji');
     } else {
-      const query = `?strokes=${strokes}`;
+      const query = `?stroke=${stroke}`;
       router.push(`/kanji/search-results${query}`);
     }
   };
@@ -67,14 +67,14 @@ const KanjiSearchForm = () => {
         />
       </div>
       <div className='w-full md:w-3/5 md:pr-2 mb-4 md:mb-0'>
-        <label htmlFor='strokes' className='sr-only'>
-          Strokes
+        <label htmlFor='stroke' className='sr-only'>
+          Stroke
         </label>
         <input
           type='number'
-          id='strokes'
-          value={strokes}
-          onChange={(e) => setStrokes(e.target.value)}
+          id='stroke'
+          value={stroke}
+          onChange={(e) => setStroke(e.target.value)}
           placeholder='Stroke count'
           className='w-full px-4 py-3 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring focus:ring-amber-950'
         />
