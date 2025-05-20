@@ -7,7 +7,6 @@ const HomeKanji = async () => {
   await connectDB();
 
   const pageSize = HOME_KANJI_LIMIT || 15;
-
   const total = await Kanji.countDocuments();
 
   const randomKanji = await Kanji.aggregate([{ $sample: { size: pageSize } }]);

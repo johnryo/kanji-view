@@ -3,10 +3,14 @@ import { noto } from '@/lib/utils/fonts';
 
 const KanjiCard = ({ kanji }) => {
   return (
-    <li
-      className={`${noto.className} bg-white text-3xl font-light px-2 pt-2 pb-3 border rounded-xl`}
-    >
-      <Link href={`/kanji/${kanji._id}`}>{kanji.literal}</Link>
+    <li>
+      <Link href={`/kanji/${kanji._id}`}>
+        <div
+          className={`${noto.className} bg-background text-5xl font-light px-3 pt-2 pb-3 shadow-sm/40 hover:shadow-lg/40`}
+        >
+          {kanji.character}
+        </div>
+      </Link>
     </li>
   );
 };

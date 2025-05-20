@@ -6,7 +6,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className='bg-[#ffddca]'>
+    <footer className='bg-[#ffebcd]'>
       <div className='container flex-between'>
         <GiJapaneseBridge size={40} />
         <div className='flex-start gap-8'>

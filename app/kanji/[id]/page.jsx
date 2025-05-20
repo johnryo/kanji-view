@@ -13,7 +13,7 @@ const KanjiPage = async ({ params }) => {
   const kanjiDoc = await Kanji.findById(id).lean();
   const kanjiDetails = convertToSerializableObject(kanjiDoc);
 
-  const { literal, reading, meaning, strokes } = kanjiDetails;
+  const { character, reading, meaning, strokes } = kanjiDetails;
 
   return (
     <>
@@ -21,31 +21,37 @@ const KanjiPage = async ({ params }) => {
         <div className='container m-auto py-6 px-6'>
           <Link
             href='/kanji'
-            className='text-foreground text-[1.125rem] flex items-center'
+            className='flex items-center gap-2 text-lg text-indigo-600 hover:text-indigo-800'
           >
-            <FaArrowLeft className='mr-2' /> Back to Kanji
+            <FaArrowLeft /> Back to Kanji List
+          </Link>
+          <Link
+            href='/'
+            className='flex items-center gap-2 text-lg text-indigo-600 hover:text-indigo-800'
+          >
+            <FaArrowLeft /> Back to Search
           </Link>
         </div>
       </section>
       <section className='py-4'>
-        <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
-          <div className='col-span-full xl:col-start-2 xl:col-end-4 flex flex-col gap-4'>
+        <div className='grid grid-cols-[1fr_2fr_1fr]'>
+          <div className='col-span-full col-start-2 col-end-3 flex flex-col gap-4'>
             <p className={`${noto.className} text-7xl font-light mb-4`}>
-              {literal}
+              {character}
             </p>
             <p className={`${noto.className} text-2xl font-light`}>
               <span
                 className={`${titillium.className} text-xl font-semibold mr-2`}
               >
-                Reading(s):
+                Reading:
               </span>{' '}
               {reading}
             </p>
             <p className='text-xl'>
-              <span className='font-semibold mr-2'>Meaning(s):</span> {meaning}
+              <span className='font-semibold mr-2'>Meaning:</span> {meaning}
             </p>
             <p className='text-xl'>
-              <span className='font-semibold mr-2'>Strokes:</span> {strokes}
+              <span className='font-semibold mr-2'>Stroke:</span> {strokes}
             </p>
           </div>
         </div>
