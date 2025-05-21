@@ -1,6 +1,6 @@
 import connectDB from '@/config/database';
 import Kanji from '@/models/kanji';
-import { KANJI_LIST_LIMIT } from '@/lib/constants';
+import { APP_BRAND, KANJI_LIST_LIMIT } from '@/lib/constants';
 import KanjiList from '@/components/KanjiList';
 import Pagination from '@/components/Pagination';
 

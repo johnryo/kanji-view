@@ -1,14 +1,16 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { APP_NAME, APP_DESCRIPTION, APP_KEYWORDS } from '@/lib/constants';
+import {
+  APP_NAME,
+  APP_BRAND,
+  APP_DESCRIPTION,
+  APP_KEYWORDS,
+} from '@/lib/constants';
 import { titillium } from '@/lib/utils/fonts';
 import '@/assets/styles/globals.css';
 
 export const metadata = {
-  title: {
-    template: `%s | JACHAR`,
-    default: APP_NAME,
-  },
+  title: `${APP_NAME} | ${APP_BRAND}`,
   description: APP_DESCRIPTION,
   keywords: APP_KEYWORDS,
 };
