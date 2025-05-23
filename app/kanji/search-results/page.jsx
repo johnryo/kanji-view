@@ -1,10 +1,9 @@
-import Link from 'next/link';
-import { FaArrowLeft } from 'react-icons/fa';
 import connectDB from '@/config/database';
 import Kanji from '@/models/kanji';
 import { convertToSerializableObject } from '@/lib/utils/convertToObject';
 import KanjiCard from '@/components/KanjiCard';
 import KanjiSearchForm from '@/components/KanjiSearchForm';
+import BackLinks from '@/components/BackLinks';
 
 const SearchResultsPage = async ({ searchParams }) => {
   await connectDB();
@@ -25,14 +24,9 @@ const SearchResultsPage = async ({ searchParams }) => {
           <KanjiSearchForm />
         </div>
       </section>
-      <section className='px-4 py-6'>
-        <div className='container-xl lg:container m-auto px-4 py-6'>
-          <Link
-            href='/kanji'
-            className='flex items-center gap-2 text-lg text-indigo-600 hover:text-indigo-800  mb-7'
-          >
-            <FaArrowLeft /> Back To Kanji List
-          </Link>
+      <BackLinks />
+      <section className='px-4'>
+        <div className='container-sm lg:container m-auto px-4 py-6'>
           <h1 className='text-2xl mb-6'>Search Results</h1>
           {kanjiItems.length === 0 ? (
             <p>No search results</p>

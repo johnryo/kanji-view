@@ -1,6 +1,6 @@
 import connectDB from '@/config/database';
 import Kanji from '@/models/kanji';
-import { APP_BRAND, KANJI_LIST_LIMIT } from '@/lib/constants';
+import { KANJI_LIST_LIMIT } from '@/lib/constants';
 import KanjiList from '@/components/KanjiList';
 import Pagination from '@/components/Pagination';
 
@@ -28,7 +28,7 @@ const KanjiListPage = async ({ searchParams }) => {
           sequentialKanji={sequentialKanji}
         />
       )}
-      <h2 className='my-8 text-center'>
+      <h2 className='my-8 text-center text-gray-400'>
         Showing {sequentialKanji.length} kanji of {total}
       </h2>
       {showPagination && (

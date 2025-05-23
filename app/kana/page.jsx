@@ -1,3 +1,7 @@
 export default function KanaPage() {
-  return <h1 className='container text-4xl font-semibold'>Kana Page</h1>;
+  return (
+    <h1 className='container text-3xl font-normal'>
+      Welcome to the Kana Page!
+    </h1>
+  );
 }

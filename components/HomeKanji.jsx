@@ -18,7 +18,7 @@ const HomeKanji = async () => {
           <KanjiCard key={kanji._id} kanji={kanji} />
         ))}
       </ul>
-      <h2 className='mt-10 text-center'>
+      <h2 className='mt-10 text-center text-gray-400'>
         Showing {randomKanji.length} random kanji of {total}
       </h2>
     </section>

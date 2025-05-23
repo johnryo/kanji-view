@@ -6,12 +6,20 @@ const Pagination = ({ page, pageSize, totalItems }) => {
   return (
     <section className='container mx-auto flex justify-center items-center my-8'>
       {page > 1 ? (
-        <Link
-          href={`/kanji?page=${page - 1}`}
-          className='mr-2 px-2 py-1 border border-gray-300 rounded'
-        >
-          Previous
-        </Link>
+        <>
+          <Link
+            href={'/kanji?page=1'}
+            className='mr-2 px-2 py-1 border border-gray-300 rounded'
+          >
+            Begin
+          </Link>
+          <Link
+            href={`/kanji?page=${page - 1}`}
+            className='mr-2 px-2 py-1 border border-gray-300 rounded'
+          >
+            Previous
+          </Link>
+        </>
       ) : null}
 
       <span className='mx-2'>
@@ -20,12 +28,20 @@ const Pagination = ({ page, pageSize, totalItems }) => {
       </span>
 
       {page < totalPages ? (
-        <Link
-          href={`/kanji?page=${page + 1}`}
-          className='ml-2 px-2 py-1 border border-gray-300 rounded'
-        >
-          Next
-        </Link>
+        <>
+          <Link
+            href={`/kanji?page=${page + 1}`}
+            className='ml-2 px-2 py-1 border border-gray-300 rounded'
+          >
+            Next
+          </Link>
+          <Link
+            href={`/kanji?page=${totalPages}`}
+            className='ml-2 px-2 py-1 border border-gray-300 rounded'
+          >
+            End
+          </Link>
+        </>
       ) : null}
     </section>
   );

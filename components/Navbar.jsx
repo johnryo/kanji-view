@@ -1,16 +1,12 @@
-'use client';
-
 import Link from 'next/link';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
 import { ImHome } from 'react-icons/im';
 import { PiBracketsAngleBold } from 'react-icons/pi';
 import logo from '@/assets/images/logo.svg';
 import { APP_NAME } from '@/lib/constants';
+import NavLink from './NavLink';
 
 export default function Navbar() {
-  const pathname = usePathname();
-
   return (
     <nav className='bg-[#ffcc99] border-b border-b-orange-400'>
       <div className='container flex-between'>
@@ -22,55 +18,19 @@ export default function Navbar() {
           <PiBracketsAngleBold />
           <span className='text-xl'>Japanese Characters</span>
         </div>
-        <div>
-          <ul className='flex align-center gap-4'>
-            <li className='py-1'>
-              <Link href='/'>
-                <ImHome size={24} className='mr-1' />
-              </Link>
-            </li>
-            <li className='py-1'>
-              <Link
-                href='/kanji'
-                className={`${
-                  pathname === '/kanji' ? 'bg-foreground' : 'text-foreground'
-                } text-background hover:bg-slate-900 hover:text-background rounded-md px-3 py-2`}
-              >
-                Kanji List
-              </Link>
-            </li>
-            <li className='py-1'>
-              <Link
-                href='/kana'
-                className={`${
-                  pathname === '/kana' ? 'bg-foreground' : 'text-foreground'
-                } text-background hover:bg-slate-900 hover:text-background rounded-md px-3 py-2`}
-              >
-                Kana List
-              </Link>
-            </li>
-            <li className='py-1'>
-              <Link
-                href='/docs'
-                className={`${
-                  pathname === '/docs' ? 'bg-foreground' : 'text-foreground'
-                } text-background hover:bg-slate-900 hover:text-background rounded-md px-3 py-2`}
-              >
-                Docs
-              </Link>
-            </li>
-            <li className='py-1'>
-              <Link
-                href='/about'
-                className={`${
-                  pathname === '/about' ? 'bg-foreground' : 'text-foreground'
-                } text-background hover:bg-slate-900 hover:text-background rounded-md px-3 py-2`}
-              >
-                About
-              </Link>
-            </li>
-          </ul>
-        </div>
+
+        <ul className='flex align-center gap-4'>
+          <li className='py-1 mr-4'>
+            <Link href='/'>
+              <ImHome size={24} className='text-indigo-600 mt-[-3px]' />
+            </Link>
+          </li>
+          <NavLink path='/kanji'>Kanji List</NavLink>
+          <NavLink path='/kana'>Kana List</NavLink>
+          <NavLink path='/docs'>Docs</NavLink>
+          <NavLink path='/learn'>Learn Japanese</NavLink>
+          <NavLink path='/about'>About</NavLink>
+        </ul>
       </div>
     </nav>
   );
