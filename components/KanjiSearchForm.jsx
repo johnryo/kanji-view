@@ -84,7 +84,7 @@ const KanjiSearchForm = () => {
       </div>
       <button
         type='submit'
-        className='md:ml-4 mt-4 md:mt-0 w-full md:w-auto px-6 py-3 rounded-lg bg-foreground text-white hover:bg-neutral-700 focus:outline-none focus:ring focus:ring-background'
+        className='md:ml-4 mt-4 md:mt-0 w-full md:w-auto px-6 py-3 rounded-lg bg-foreground text-white hover:bg-black focus:outline-none focus:ring focus:ring-background hover:cursor-pointer'
       >
         Search
       </button>

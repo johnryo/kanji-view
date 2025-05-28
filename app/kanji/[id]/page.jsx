@@ -31,17 +31,17 @@ const KanjiPage = async ({ params }) => {
             </h2>
             <p className={`${noto.className} text-2xl font-light`}>
               <span
-                className={`${titillium.className} text-xl font-semibold mr-2`}
+                className={`${titillium.className} text-xl font-normal mr-2`}
               >
                 Reading:
               </span>{' '}
               {reading}
             </p>
             <p className='text-xl'>
-              <span className='font-semibold mr-2'>Meaning:</span> {meaning}
+              <span className='font-normal mr-2'>Meaning:</span> {meaning}
             </p>
             <p className='text-xl'>
-              <span className='font-semibold mr-2'>Stroke:</span> {stroke}
+              <span className='font-normal mr-2'>Strokes:</span> {stroke}
             </p>
           </div>
         </div>

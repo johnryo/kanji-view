@@ -11,9 +11,9 @@ const KanjiListPage = async ({ searchParams }) => {
   const { page = 1, pageSize = kanjiListLimit } = await searchParams;
 
   const skip = (page - 1) * pageSize;
-  const total = await Kanji.countDocuments();
+  const total = await Kanji.countDocuments({});
+  const totalPages = Math.ceil(total / pageSize);
   const showPagination = total > pageSize;
-
   const sequentialKanji = await Kanji.find({}).skip(skip).limit(pageSize);
 
   return (
@@ -22,20 +22,14 @@ const KanjiListPage = async ({ searchParams }) => {
       {sequentialKanji.length === 0 ? (
         <p>No Kanji Found</p>
       ) : (
-        <KanjiList
-          pageSize={pageSize}
-          total={total}
-          sequentialKanji={sequentialKanji}
-        />
+        <KanjiList sequentialKanji={sequentialKanji} />
       )}
-      <h2 className='my-8 text-center text-gray-400'>
-        Showing {sequentialKanji.length} kanji of {total}
-      </h2>
       {showPagination && (
         <Pagination
           page={parseInt(page)}
           pageSize={parseInt(pageSize)}
           totalItems={total}
+          totalPages={totalPages}
         />
       )}
     </section>
