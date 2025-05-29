@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { toast } from 'react-toastify';
 
 const KanjiSearchForm = () => {
   const [reading, setReading] = useState('');
@@ -30,7 +31,7 @@ const KanjiSearchForm = () => {
     if (stroke === '') {
       router.push('/kanji');
     } else if (stroke <= 0) {
-      alert('The stroke number must be a positive integer.');
+      toast.error('Stroke number must be a positive integer');
       router.push('/');
     } else {
       const query = `?stroke=${stroke}`;

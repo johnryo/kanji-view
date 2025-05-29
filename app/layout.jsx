@@ -1,3 +1,4 @@
+import { ToastContainer } from 'react-toastify';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import {
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
           <main className='flex-grow'>{children}</main>
           <Footer />
         </div>
+        <ToastContainer draggable={true} theme='dark' />
       </body>
     </html>
   );

@@ -29,13 +29,18 @@ const SearchResultsPage = async ({ searchParams }) => {
         <div className='container-sm lg:container m-auto px-4 py-6'>
           <h1 className='text-2xl mb-6'>Search Results</h1>
           {kanjiItems.length === 0 ? (
-            <p>No search results</p>
+            <p className='text-xl'>No search results</p>
           ) : (
             <ul className='flex flex-wrap gap-6 list-none'>
               {kanjiItems.map((kanji) => (
                 <KanjiCard key={kanji._id} kanji={kanji} />
               ))}
             </ul>
+          )}
+          {kanjiItems.length > 0 && (
+            <div className='mt-6 text-gray-500 text-right'>
+              {kanjiItems.length} kanji in search results
+            </div>
           )}
         </div>
       </section>

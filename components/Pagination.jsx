@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { LiaAngleLeftSolid } from 'react-icons/lia';
 import { LiaAngleRightSolid } from 'react-icons/lia';
 import { LiaEllipsisHSolid } from 'react-icons/lia';
-import PaginationLink from './PaginationLink';
 import RangeTracker from './RangeTracker';
 
 const Pagination = ({ page, pageSize, totalItems, totalPages }) => {
@@ -20,17 +19,26 @@ const Pagination = ({ page, pageSize, totalItems, totalPages }) => {
 
         {page <= totalPages - (totalPages - 3) ? (
           <>
-            <PaginationLink pages={totalPages}>
+            <Link
+              href={`/kanji?page=${totalPages - (totalPages - 1)}`}
+              className='text-blue-600 font-normal'
+            >
               {totalPages - (totalPages - 1)}
-            </PaginationLink>
+            </Link>
 
-            <PaginationLink page={page} pages={totalPages} subtrahend={2}>
+            <Link
+              href={`/kanji?page=${totalPages - (totalPages - 2)}`}
+              className='text-blue-600 font-normal'
+            >
               {totalPages - (totalPages - 2)}
-            </PaginationLink>
+            </Link>
 
-            <PaginationLink page={page} pages={totalPages} subtrahend={3}>
+            <Link
+              href={`/kanji?page=${totalPages - (totalPages - 3)}`}
+              className='text-blue-600 font-normal'
+            >
               {totalPages - (totalPages - 3)}
-            </PaginationLink>
+            </Link>
 
             <LiaEllipsisHSolid />
 
@@ -43,9 +51,12 @@ const Pagination = ({ page, pageSize, totalItems, totalPages }) => {
           </>
         ) : page > totalPages - (totalPages - 3) && page < totalPages - 2 ? (
           <>
-            <PaginationLink pages={totalPages}>
+            <Link
+              href={`/kanji?page=${totalPages - (totalPages - 1)}`}
+              className='text-blue-600 font-normal'
+            >
               {totalPages - (totalPages - 1)}
-            </PaginationLink>
+            </Link>
 
             <LiaEllipsisHSolid />
 
@@ -67,19 +78,28 @@ const Pagination = ({ page, pageSize, totalItems, totalPages }) => {
           </>
         ) : page >= totalPages - 2 ? (
           <>
-            <PaginationLink pages={totalPages}>
+            <Link
+              href={`kanji?page=${totalPages - (totalPages - 1)}`}
+              className='text-blue-600 font-normal'
+            >
               {totalPages - (totalPages - 1)}
-            </PaginationLink>
+            </Link>
 
             <LiaEllipsisHSolid />
 
-            <PaginationLink page={page} pages={totalPages} subtrahend={2}>
+            <Link
+              href={`/kanji?page=${totalPages - 2}`}
+              className='text-blue-600 font-normal'
+            >
               {totalPages - 2}
-            </PaginationLink>
+            </Link>
 
-            <PaginationLink page={page} pages={totalPages}>
+            <Link
+              href={`/kanji?page=${totalPages - 1}`}
+              className='text-blue-600 font-normal'
+            >
               {totalPages - 1}
-            </PaginationLink>
+            </Link>
 
             <Link
               href={`/kanji?page=${totalPages}`}
