@@ -8,7 +8,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className='bg-[#ffebcd]'>
+    <footer className='bg-[#fff8f0]'>
       <div className='container-sm flex-between'>
         <Image src={logo} alt='Kanji View logo' />
         <div className='flex-start gap-8'>

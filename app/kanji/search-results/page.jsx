@@ -19,14 +19,16 @@ const SearchResultsPage = async ({ searchParams }) => {
 
   return (
     <>
-      <section className='bg-[#ffddca] py-4'>
+      <section className='bg-[#ffcc99] py-4'>
         <div className='max-w-7xl mx-auto px-4 pt-3 flex flex-col items-start sm:px-6 lg:px-8'>
           <KanjiSearchForm />
         </div>
       </section>
+
       <BackLinks />
-      <section className='px-4'>
-        <div className='container-sm lg:container m-auto px-4 py-6'>
+
+      <section className='md:px-10 lg:px-20'>
+        <div className='container m-auto px-4 py-6'>
           <h1 className='text-2xl mb-6'>Search Results</h1>
           {kanjiItems.length === 0 ? (
             <p className='text-xl'>No search results</p>

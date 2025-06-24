@@ -9,7 +9,6 @@ const KanjiListPage = async ({ searchParams }) => {
 
   const kanjiListLimit = KANJI_LIST_LIMIT || 50;
   const { page = 1, pageSize = kanjiListLimit } = await searchParams;
-
   const skip = (page - 1) * pageSize;
   const total = await Kanji.countDocuments({});
   const totalPages = Math.ceil(total / pageSize);

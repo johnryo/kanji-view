@@ -31,7 +31,7 @@ const KanjiSearchForm = () => {
     if (stroke === '') {
       router.push('/kanji');
     } else if (stroke <= 0) {
-      toast.error('Stroke number must be a positive integer');
+      toast.error('Stroke count must be a positive integer');
       router.push('/');
     } else {
       const query = `?stroke=${stroke}`;
@@ -54,7 +54,7 @@ const KanjiSearchForm = () => {
           value={reading}
           onChange={(e) => setReading(e.target.value)}
           placeholder='Kanji reading in kana'
-          className='w-full px-4 py-3 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring focus:ring-amber-950'
+          className='w-full px-4 py-3 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring focus:ring-amber-950 opacity-75 cursor-not-allowed'
         />
       </div>
       <div className='w-full md:w-3/5 md:pr-2 mb-4 md:mb-0'>
@@ -67,7 +67,7 @@ const KanjiSearchForm = () => {
           value={meaning}
           onChange={(e) => setMeaning(e.target.value)}
           placeholder='English meaning'
-          className='w-full px-4 py-3 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring focus:ring-amber-950'
+          className='w-full px-4 py-3 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring focus:ring-amber-950 opacity-75 cursor-not-allowed'
         />
       </div>
       <div className='w-full md:w-3/5 md:pr-2 mb-4 md:mb-0'>
@@ -79,7 +79,7 @@ const KanjiSearchForm = () => {
           id='stroke'
           value={stroke}
           onChange={(e) => setStroke(e.target.value)}
-          placeholder='Strokes'
+          placeholder='Stroke Count'
           className='w-full px-4 py-3 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring focus:ring-amber-950'
         />
       </div>

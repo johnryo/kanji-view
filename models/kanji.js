@@ -1,6 +1,9 @@
 import { Schema, model, models } from 'mongoose';
 
 const kanjiSchema = new Schema({
+  id: {
+    type: Number,
+  },
   character: {
     type: String,
     required: [true, 'One character is required'],

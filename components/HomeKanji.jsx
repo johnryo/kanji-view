@@ -8,7 +8,6 @@ const HomeKanji = async () => {
 
   const pageSize = HOME_KANJI_LIMIT || 15;
   const total = await Kanji.countDocuments();
-
   const randomKanji = await Kanji.aggregate([{ $sample: { size: pageSize } }]);
 
   return (

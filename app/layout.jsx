@@ -22,7 +22,9 @@ export default function RootLayout({ children }) {
       <body className={titillium.className}>
         <div className='flex flex-col min-h-screen'>
           <Navbar />
-          <main className='flex-grow'>{children}</main>
+          <main className='flex-grow bg-radial-[at_50%_100%] from-[#dfe0df] to-white '>
+            {children}
+          </main>
           <Footer />
         </div>
         <ToastContainer draggable={true} theme='dark' />

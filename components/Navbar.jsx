@@ -22,7 +22,7 @@ export default function Navbar() {
         <ul className='flex align-center gap-4'>
           <li className='py-1 mr-4'>
             <Link href='/'>
-              <ImHome size={24} className='text-indigo-600 mt-[-3px]' />
+              <ImHome size={24} className='text-blue-500 mt-[-3px]' />
             </Link>
           </li>
           <NavLink path='/kanji'>Kanji List</NavLink>
